@@ -128,15 +128,15 @@ class PortfolioBuilder:
 
 
 
-if __name__ == '__main__':  # You should keep this line for our auto-grading code.
+if __name__ == '__main__': 
     import time
     t0 = time.time()
-    barry = PortfolioBuilder()
-    df = barry.get_daily_data(['GOOG','AAPL', 'MSFT'], date(2020, 1, 1), date(2020, 2, 1))
+    test = PortfolioBuilder()
+    df = test.get_daily_data(['GOOG','AAPL', 'MSFT'], date(2020, 1, 1), date(2020, 2, 1))
     print ("df length is", len(df))
-    universal = barry.find_universal_portfolio(20)
+    universal = test.find_universal_portfolio(20)
     print(universal,'\n',"universal length is:",len(universal))
-    expo = barry.find_exponential_gradient_portfolio()
+    expo = test.find_exponential_gradient_portfolio()
     print(expo)
     t1 = time.time()
     print(t1-t0,"seconds to run the test")
